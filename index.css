@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Lobster&family=Poppins:wght@200;300;400;500;700&family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -30,26 +32,73 @@ ul{
     list-style: none;
 }
 
+.main-content
+{
+    padding-left: 250px;
+}
+
 .section{
     background:var(--bg-black-900) ;
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
     padding: 0 30px;
-    top: 0;
-    right: 0;
-    z-index: 0;
     opacity: 1;
 }
+
+.hidden {
+    display: none !important;
+}
+
 .padd-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
 .container {
-    max-width: 1100px;
+    max-width: 1300px;
     width: 100%;
     margin: auto;
+}
+
+.section .container {
+    padding-top: 45px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.hh {
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.hh::before{
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 20%;
+
+}
+
+.hh::after{
+    content: '';
+    height: 4px;
+    width: 30px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    border-radius: 20%;
 }
 
 .row {
@@ -57,7 +106,6 @@ ul{
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
-    
     position: relative;
     
 }
@@ -103,17 +151,18 @@ ul{
 }
 
 .aside .logo a {
+    font-family: 'Salsa', cursive;
     color: var(--text-black-900);
-    font-weight: 700;
+    font-weight: 600;
     padding: 15px 20px;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 5px;
     position: relative;
 }
 
 #span {
     font-family: 'Clicker Script', cursive;
-    font-family: 40px;
+    font-size: 35px;
 }
 
 .aside .logo a::before {
@@ -281,4 +330,78 @@ ul{
     margin-bottom: 65px;
     font-size: 20px;
     color: var(--text-black-700);
+}
+
+/* about */ 
+
+.about-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    
+}
+
+.about-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+    
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.about-text h3 span {
+    color: var(--skin-color);
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    color: var(--text-black-900);
+}
+
+.personal-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+}
+
+.skills{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+
+}
+
+.info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.info-item p {
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-500);
+}
+
+.info-item p span {
+    font-weight: 400;
+    max-width: 40%;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons .btn {
+    margin-right: 15px;
+    margin-top: 10px;
 }
